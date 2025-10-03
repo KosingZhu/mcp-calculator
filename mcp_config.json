@@ -5,6 +5,11 @@
       "command": "python",
       "args": ["-m", "calculator"]
     },
+    "local-operator": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["-m", "pc_operator"]
+    },
     "remote-sse-server": {
       "type": "sse",
       "url": "https://api.example.com/sse",
