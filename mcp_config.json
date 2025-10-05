@@ -23,12 +23,18 @@
     "Playwright": {
       "type": "http",
       "url": "http://localhost:30045/mcp",
-      "disabled": false
+      "disabled": true
     },
     "Playwright_npx": {
-      "type": "stdio",
+      "type": "stdiobak禁用",
       "command": "npx.cmd",
-      "args": ["-y", "@playwright/mcp@latest"]
+      "args": ["-y", "@playwright/mcp@latest"],
+      "disabled": true
+    },
+    "streamable-mcp-server": {
+      "type": "streamablehttp",
+      "url": "http://127.0.0.1:12306/mcp",
+      "disabled": false
     },
     "filesystem": {
       "type": "stdio",
@@ -43,6 +49,23 @@
       "type": "stdio",
       "command": "uvx",
       "args": ["mcp-server-git"]
+    },
+    "memory": {
+      "type": "stdio",
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "E:\\AILearning\\atomS3R\\xiaozhimcp\\memory.json"
+      }
+    },
+    "excalidraw": {
+      "command": "node",
+      "args": [
+        "E:\\AILearning\\atomS3R\\mcp_excalidraw\\dist\\index.js"
+      ]
     }
   }
 }
