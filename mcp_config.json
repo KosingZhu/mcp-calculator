@@ -19,6 +19,30 @@
       "type": "http",
       "url": "https://api.example.com/mcp",
       "disabled": true
+    },
+    "Playwright": {
+      "type": "http",
+      "url": "http://localhost:30045/mcp",
+      "disabled": false
+    },
+    "Playwright_npx": {
+      "type": "stdio",
+      "command": "npx.cmd",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "E:\\AILearning"
+      ]
+    },
+    "mcp-server-git": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["mcp-server-git"]
     }
   }
 }
